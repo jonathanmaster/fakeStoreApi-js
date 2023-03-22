@@ -7,6 +7,7 @@ const productDetailCloseIcon = document.querySelector(".product-detail-close");
 const shoppingCartContainer = document.querySelector("#shoppingCartContainer");
 const productDetailContainer = document.querySelector("#productDetail");
 const cardsContainer = document.querySelector(".cards-container");
+const cardsContainer2 = document.querySelector(".cards-container-2");
 
 menuEmail.addEventListener("click", () => {
   const isAsideClose = shoppingCartContainer.classList.contains("inactive"); //preguntando si tiene la clase entonces esta cerrado
@@ -63,9 +64,6 @@ const api = axios.create({
   headers:{
       "Content-Type": "aplication/json;charset=utf-8",
   },
-  // params: {
-  //     "language": navigator.language || "es-ES"
-  // },
 })
 
 //All products
@@ -113,7 +111,52 @@ data.forEach((product) => {
 });
 
 }
-getAllProducts()
+
+
+// algunos productos
+const getAllProductsHome = async()=>{
+  const {data} = await api('products?limit=6')
+  data.forEach((product) => {
+    const productCardCategory = document.createElement("div");
+    productCardCategory.classList.add("product-card-2");
+  
+    const productImg = document.createElement("img");
+    productImg.setAttribute("src", product.image);
+    productImg.addEventListener("click", () => {
+      shoppingCartContainer.classList.add("inactive");
+      productDetailContainer.classList.remove("inactive");
+    });
+  
+    const productInfo = document.createElement('div')
+    productInfo.classList.add('product-info-2')
+  
+    const productInfoDiv = document.createElement("div");
+  
+        const productPrice = document.createElement("p");
+        productPrice.innerText = "$" + product.price;
+        const productName = document.createElement("p");
+        productName.innerText = product.title;
+        
+        productInfoDiv.appendChild(productPrice);
+        productInfoDiv.appendChild(productName);
+    
+        const productInfoFigure = document.createElement("figure");
+        const productImgCard = document.createElement("img");
+        productImgCard.setAttribute("src", "./icons/bt_add_to_cart.svg");
+    
+        productInfoFigure.appendChild(productImgCard);
+    
+        productInfo.appendChild(productInfoDiv);
+        productInfo.appendChild(productInfoFigure);
+    
+        productCardCategory.appendChild(productImg);
+        productCardCategory.appendChild(productInfo);
+    
+        cardsContainer2.appendChild(productCardCategory);
+  
+  });
+  
+}
 
 
 //Categories
@@ -141,6 +184,5 @@ data.forEach((category) => {
 });
 
 }
-getCategoriesProducts()
 
 
