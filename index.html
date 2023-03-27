@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav>
@@ -22,18 +21,32 @@
         <li>
           <a href="/">All</a>
         </li>
-        <li>
-          <a href="/">Categories</a>
+        <li class="menu-categories">
+          Categories
         </li>
         <li>
           <a href="/">Deals</a>
         </li>
       </ul>
-      <!-- <form id="searchForm" class="header-searchForm">
-        <input type="text" placeholder="Search" />
-        <button id="searchBtn">🔍</button>
-      </form> -->
     </div>
+
+    <!-- menu categorias -->
+    <div class="desktop-menuCategory inactive">
+      <ul>
+        <li>
+          <a href="/">Electronics</a>
+        </li>
+        <li>
+          <a href="/">Jewelery</a>
+        </li>
+        <li>
+          <a href="/">Men's clothing</a>
+        </li>
+        <li>
+          <a href="/">Women's clothing</a>
+        </li>
+      </ul>
+  </div>
 
     <div class="navbar-right">
       <ul>
@@ -45,7 +58,7 @@
       </ul>
     </div>
 
-    <!-- carrito de compras -->
+    <!-- menu de la cuenta -->
     <div class="desktop-menu inactive">
       <ul>
         <li>
@@ -151,7 +164,7 @@
     <div class="product-detail-close">
       <img src="./icons/icon_close.png" alt="close">
     </div>
-    <img src="" alt="bike">
+    <img src="https://cdn.thewirecutter.com/wp-content/media/2022/10/laptopstopicpage-2048px-2029.jpg?auto=webp&quality=75&width=1024" alt="bike">
     <div class="product-info">
       <p>$68,00</p>
       <p>Cicla</p>
@@ -163,6 +176,7 @@
     </div>
   </aside>
 
+  <!-- fondo-home -->
   <div class="container-home">
     <div class="container-title-home">
       <h1>Discover & Shop The Trend</h1>
@@ -176,6 +190,7 @@
   </section>  
 
   <!-- Todas las categorias -->
+  <div class="container-categories"></div>
   <section id="categoriesPreview" class="categoriesPreview-container">
     <h2 class="categoriesPreview-title">Shop Our Top Categories</h2>
     <article class="categoriesPreview-list">
@@ -185,14 +200,149 @@
     </article>
   </section>
 
+  <!-- categoria electronic -->
+  <div class="fondo-electronic"></div>
+  <section class="container-electronic">
+    <h2 class="categoriesPreview-title">Electronics</h2>
+    <div class="cards-container-electronic"></div>
+  </section>
+  <!-- categoria Jewelery -->
+  <section class="container-Jewelery">
+    <h2 class="categoriesPreview-title">Jewelery</h2>
+    <div class="cards-container-electronic"></div>
+  </section>
+  <!-- categoria Men's clothing -->
+  <section class="container-Mensclothing">
+    <h2 class="categoriesPreview-title">Men's clothing</h2>
+    <div class="cards-container-electronic"></div>
+  </section>
+  <!-- categoria Women's clothing -->
+  <section class="container-Womensclothing">
+    <h2 class="categoriesPreview-title">Women's clothing</h2>
+    <div class="cards-container-electronic"></div>
+  </section>
+
   <!-- algunos de nuestros productos -->
   <section class="main-container-2">
     <h2 class="categoriesPreview-title">Some of our products</h2>
-    <div class="cards-container-2">
-    </div> 
+    <div class="cards-container-2"></div> 
   </section> 
 
+  <!-- algunos servicios -->
+  <section class="services-container">
+    <h2 class="categoriesPreview-title">Services to help you shop</h2>
+    <div class="cards-container-services">
+      <div class="card-services">
+        <h2>Frequently Asked Questions</h2>
+        <p>Updates on safe Shopping in Our Stores</p>
+        <img src="./images/service-help/mama-hija-tablet.jpg" alt="mom-daughter-watching">
+      </div>
+      <div class="card-services">
+        <h2>Online Payment Process</h2>
+        <p>Updates on safe Shopping in Our Stores</p>
+        <img src="./images/service-help/persona-con-celular.png" alt="mom-daughter-watching">
+      </div>
+      <div class="card-services">
+        <h2>Home Delivery Options</h2>
+        <p>Updates on safe Shopping in Our Stores</p>
+        <img src="./images/service-help/domicilios-service.jpg" alt="mom-daughter-watching">
+      </div>
+    </div> 
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__addr">
+      <h1 class="footer__logo">YardSale</h1>
+          
+      <h2>Contact</h2>
+      
+      <address>
+        5534 Somewhere In. The World 22193-10212<br>
+            
+        <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+      </address>
+    </div>
+    
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Media</h2>
+  
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Online</a>
+          </li>
+  
+          <li>
+            <a href="#">Print</a>
+          </li>
+              
+          <li>
+            <a href="#">Alternative Ads</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Technology</h2>
+        
+        <ul class="nav__ul nav__ul--extra">
+          <li>
+            <a href="#">Hardware Design</a>
+          </li>
+          
+          <li>
+            <a href="#">Software Design</a>
+          </li>
+          
+          <li>
+            <a href="#">Digital Signage</a>
+          </li>
+          
+          <li>
+            <a href="#">Automation</a>
+          </li>
+          
+          <li>
+            <a href="#">Artificial Intelligence</a>
+          </li>
+          
+          <li>
+            <a href="#">IoT</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+        
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          
+          <li>
+            <a href="#">Terms of Use</a>
+          </li>
+          
+          <li>
+            <a href="#">Sitemap</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    <div class="legal">
+      <p>&copy; 2023 Something. All rights reserved.</p>
+      
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span> Jonathan Rodriguez</span>
+      </div>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./src/node.js"></script>
   <script src="./src/main.js"></script>
   <script src="./src/navigation.js"></script>
   <script src="./images/images.js"></script>
